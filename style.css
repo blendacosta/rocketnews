@@ -1,0 +1,121 @@
+:root {
+  --body-bg-color: #121214;
+  --text-color: #e1e1e6;
+  --title-color: #04d361;
+  --form-color: #a8a8a8;
+  --bg-button-color: #8257e5;
+  --font-spartan: 'Spartan', sans-serif;
+  --font-worksans: 'Work Sans', sans-serif;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+  font-family: var(--font-spartan);
+  font-size: 14px;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+  z-index: -2;
+}
+
+body {
+  display: grid;
+  grid-template-areas: 'main bg-image';
+  grid-template-columns: 1fr 50vw;
+}
+
+.header,
+.main {
+  margin-left: 2.2em;
+}
+
+.header img {
+  margin-top: 3.6em;
+  width: 50%;
+}
+
+.main {
+  grid-area: main;
+  text-transform: lowercase;
+}
+
+.title {
+  color: var(--title-color);
+  font-family: var(--font-worksans);
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-weight: bold;
+}
+
+.main-content {
+  margin: 6.5em 2.2em 3.6em 0;
+}
+
+.form {
+  color: var(--form-color);
+  display: block;
+  font-weight: bold;
+  margin-bottom: 3.6em;
+  text-transform: initial;
+}
+
+.form-field {
+  display: flex;
+  filter: drop-shadow(4px 10px 15px rgba(0, 0, 0, 0.5));
+  margin: 1.2em 0;
+  position: absolute;
+  width: max-content;
+}
+
+.rectangle {
+  background-color: var(--title-color);
+  width: 0.4em;
+}
+
+.form-input {
+  font-size: 0.8em;
+  padding: 1em 55em 1em 1em;
+  position: relative;
+  z-index: 3;
+}
+
+.form-field button {
+  align-items: center;
+  background-color: var(--bg-button-color);
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 3.4em;
+  height: 3.4em;
+}
+
+.link {
+  align-items: center;
+  color: var(--bg-button-color);
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  padding-top: 3.6em;
+  text-decoration: none;
+  width: 14em;
+}
+
+.bg-image {
+  background-image: url(assets/read_news.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: bg-image;
+}
