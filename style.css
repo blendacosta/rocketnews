@@ -46,6 +46,11 @@ body {
   grid-area: main;
   text-transform: lowercase;
 }
+.title,
+.subtitle,
+.text {
+  margin-bottom: 0.6em;
+}
 
 .title {
   color: var(--title-color);
